@@ -7,8 +7,16 @@ public class ButtonState
     public bool value;
     public float holdTime = 0;
 }
+
+public enum Directions
+{
+    Right = 1,
+    Left = -1
+}
+
 public class InputState : MonoBehaviour
 {
+    public Directions direction = Directions.Right;
     public Dictionary<Buttons, ButtonState> buttonStates = new Dictionary<Buttons, ButtonState>();
 
     // Start is called before the first frame update

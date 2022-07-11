@@ -136,6 +136,7 @@ GameObject:
   - component: {fileID: 486418591}
   - component: {fileID: 486418594}
   - component: {fileID: 486418595}
+  - component: {fileID: 486418590}
   m_Layer: 0
   m_Name: Player1
   m_TagString: Untagged
@@ -143,6 +144,19 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!114 &486418590
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 486418589}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9b74888b4e35a644d8ce7e3c45bdf06b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  inputButtons: 0000000001000000
 --- !u!50 &486418591
 Rigidbody2D:
   serializedVersion: 4
@@ -242,6 +256,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8cfdf063c69760f44a4913185a405bef, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  direction: 1
 --- !u!61 &486418595
 BoxCollider2D:
   m_ObjectHideFlags: 0
