@@ -7,17 +7,32 @@ public class BasicMovement : MonoBehaviour
 
     public float speed = 5f;
     private Rigidbody2D body2d;
+    public Buttons[] input;
+
+    private InputState inputState;
 
     // Start is called before the first frame update
     void Start()
     {
         body2d = GetComponent<Rigidbody2D>();
+        inputState = GetComponent<InputState>();
     }
 
     // Update is called once per frame
     void Update()
     {
-        var axisValue = Input.GetAxis("Horizontal");
-        body2d.velocity = new Vector2(speed * axisValue, body2d.velocity.y);
+        var right = inputState.GetButtonValue(input[0]);
+        var left = inputState.GetButtonValue(input[1]);
+
+        var velX = speed;
+
+        if (right || left)
+        {
+            velX *= left ? -1 : 1;
+        } else {
+            velX = 0;
+        }
+
+        body2d.velocity = new Vector2(velX, body2d.velocity.y);
     }
 }
