@@ -140,6 +140,7 @@ GameObject:
   - component: {fileID: 486418596}
   - component: {fileID: 486418597}
   - component: {fileID: 486418598}
+  - component: {fileID: 486418599}
   m_Layer: 0
   m_Name: Player1
   m_TagString: Untagged
@@ -222,7 +223,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_Sprite: {fileID: 7482667652216324306, guid: 48e93eef0688c4a259cb0eddcd8661f7, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0, g: 0.8768053, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -303,6 +304,7 @@ MonoBehaviour:
   inputButtons: 000000000100000004000000
   speed: 7
   runMultiplier: 2
+  running: 0
 --- !u!95 &486418597
 Animator:
   serializedVersion: 3
@@ -334,6 +336,25 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8362022fe71f08a4386054c4511aa94b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &486418599
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 486418589}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b9cfe1255bda74e4680b09cec1486f1a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  collisionLayer:
+    serializedVersion: 2
+    m_Bits: 64
+  standing: 1
+  bottomPosition: {x: 0, y: -0.5}
+  collisionRadius: 0.25
+  debugColor: {r: 1, g: 0, b: 0, a: 1}
 --- !u!1 &986822353
 GameObject:
   m_ObjectHideFlags: 0
@@ -402,7 +423,7 @@ GameObject:
   - component: {fileID: 1750872484}
   - component: {fileID: 1750872483}
   - component: {fileID: 1750872482}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Ground
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -476,7 +497,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_Sprite: {fileID: 7482667652216324306, guid: 48e93eef0688c4a259cb0eddcd8661f7, type: 3}
-  m_Color: {r: 0.23584908, g: 0.21693103, b: 0.20358671, a: 1}
+  m_Color: {r: 0.14097543, g: 0.3018868, b: 0.1760257, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -655,7 +676,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 1
   m_Sprite: {fileID: -2413806693520163455, guid: ebe73ca9363db456bacf42c025bb4847, type: 3}
-  m_Color: {r: 1, g: 0, b: 0, a: 1}
+  m_Color: {r: 1, g: 0.19339621, b: 0.23246193, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0

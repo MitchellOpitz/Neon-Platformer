@@ -8,12 +8,14 @@ public class PlayerManager : MonoBehaviour
     private InputState inputState;
     private Walk walkBehavior;
     private Animator animator;
+    private CollisionState collisionState;
 
     private void Awake()
     {
         inputState = GetComponent<InputState>();
         walkBehavior = GetComponent<Walk>();
         animator = GetComponent<Animator>();
+        collisionState = GetComponent<CollisionState>();
 
     }
 
@@ -26,7 +28,7 @@ public class PlayerManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(inputState.absVelX == 0)
+        if(collisionState.standing)
         {
             ChangeAnimationState(0);
         }
