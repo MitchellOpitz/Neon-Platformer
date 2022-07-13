@@ -73,4 +73,12 @@ public class InputState : MonoBehaviour
         else
             return false;
     }
+
+    public float GetButtonHoldTime(Buttons key)
+    {
+        if (buttonStates.ContainsKey(key))
+            return buttonStates[key].holdTime;
+        else
+            return 0;
+    }
 }
