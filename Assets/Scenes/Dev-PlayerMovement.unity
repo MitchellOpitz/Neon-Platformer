@@ -142,6 +142,7 @@ GameObject:
   - component: {fileID: 486418598}
   - component: {fileID: 486418599}
   - component: {fileID: 486418600}
+  - component: {fileID: 486418601}
   m_Layer: 0
   m_Name: Player1
   m_TagString: Untagged
@@ -363,13 +364,37 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 486418589}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: b92934c4f1a91134eb670403dc1099f4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   inputButtons: 05000000
   jumpSpeed: 25
+  jumpDelay: 0.1
+  jumpCount: 2
+  jumpEffectPrefab: {fileID: 6788711284372272199, guid: 7487729f94022b14d89458059918f4ea, type: 3}
+--- !u!114 &486418601
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 486418589}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4e4464e51f380c74f920cccdb913127c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  inputButtons: 05000000
+  jumpSpeed: 15
+  jumpDelay: 0.1
+  jumpCount: 2
+  jumpEffectPrefab: {fileID: 6788711284372272199, guid: 7487729f94022b14d89458059918f4ea, type: 3}
+  longJumpDelay: 0.12
+  longJumpMultiplier: 1.1
+  canLongJump: 0
+  isLongJumping: 0
 --- !u!1 &986822353
 GameObject:
   m_ObjectHideFlags: 0
