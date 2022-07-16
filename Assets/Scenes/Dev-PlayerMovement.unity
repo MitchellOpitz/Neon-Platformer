@@ -143,6 +143,8 @@ GameObject:
   - component: {fileID: 486418599}
   - component: {fileID: 486418600}
   - component: {fileID: 486418601}
+  - component: {fileID: 486418602}
+  - component: {fileID: 486418603}
   m_Layer: 0
   m_Name: Player1
   m_TagString: Untagged
@@ -395,6 +397,38 @@ MonoBehaviour:
   longJumpMultiplier: 1.1
   canLongJump: 0
   isLongJumping: 0
+--- !u!114 &486418602
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 486418589}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 79a403eb38bf6314bbe165de0e9309cf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  inputButtons: 03000000
+  scale: 0.5
+  ducking: 0
+  centerOffsetY: 0
+--- !u!58 &486418603
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 486418589}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: -0.5}
+  serializedVersion: 2
+  m_Radius: 0.25
 --- !u!1 &986822353
 GameObject:
   m_ObjectHideFlags: 0
@@ -441,6 +475,10 @@ MonoBehaviour:
     offValue: 0
     button: 5
     condition: 0
+  - axisName: Vertical
+    offValue: 0
+    button: 3
+    condition: 1
   inputState: {fileID: 486418594}
 --- !u!4 &986822355
 Transform:
